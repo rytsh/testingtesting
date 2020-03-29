@@ -1,0 +1,17 @@
+$light-color: #f4f4f4;
+$font-stack: Arial, Helvetica, sans-serif;
+
+@import "components/layout/Layout";
+@import "components/posts/Post";
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: $light-color;
+  font-family: $font-stack;
+  line-height: 1.6;
+}

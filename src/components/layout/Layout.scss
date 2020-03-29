@@ -1,0 +1,84 @@
+@import 'components/calculator/View';
+
+.layout {
+  display: grid;
+  grid-template-areas:
+    "sidebar content";
+  grid-template-columns: 170px 1fr;
+  // grid-gap: 1rem;
+
+  .sideBar {
+    grid-template: "sidebar";
+    background-color: #253031;
+    min-height: 100vh;
+    flex: none;
+
+    .title {
+      background-color: #FE4A49;
+      text-align: center;
+      font-size: 2rem;
+      color: whitesmoke;
+    }
+    nav {
+      a {
+        // background-color: #fff;
+        height: 2rem;
+        align-items: center;
+        display: flex;
+        text-decoration: unset;
+        color: $light-color;
+      }
+      .active {
+        background-color: $light-color;
+        color: invert($light-color, 100%);
+      }
+    }
+  }
+
+  .content {
+    grid-template: "content";
+    padding-left: 10px;
+    padding-right: 10px;
+    pre {
+      white-space: inherit;
+      border: 1px solid grey;
+      padding: 2px;
+    }
+    pre + pre {
+      margin-top: 5px;
+    }
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .layout {
+    grid-template-areas:
+      "sidebar"
+      "content";
+    grid-template-rows: 20px 1fr;
+    grid-template-columns: unset;
+    .sideBar {
+      display: flex;
+      grid-template: "sidebar";
+      min-height: unset;
+      flex-direction: row;
+      justify-content: space-between;
+      .title {
+        font-size: unset;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding-left: 10px;
+        padding-right: 10px;
+      }
+      nav {
+        display: inline-flex;
+        a {
+          height: 100%;
+          padding-left: 10px;
+          padding-right: 10px;
+        }
+      }
+    }
+  }
+}

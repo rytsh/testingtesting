@@ -1,0 +1,25 @@
+.history {
+  grid-area: history;
+  li {
+    list-style-position: inside;
+    list-style: none;
+    border: thin;
+    border-style: solid;
+    border-color: black;
+    border-bottom: none;
+    &:nth-last-child(1){
+      border-bottom: solid;
+      border-bottom-width: thin;
+    }
+    &:nth-child(2n){
+      $nthclr: darken($light-color, 20%);
+      background-color: $nthclr;
+      &:hover{
+        background-color: lighten($nthclr, 5%);
+      }
+    }
+    &:hover{
+      background-color: lighten($light-color, 5%);
+    }
+  }
+}

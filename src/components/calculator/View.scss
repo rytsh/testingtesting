@@ -1,0 +1,29 @@
+@import 'History';
+@import 'Calc';
+
+.calculator {
+  display: grid;
+  grid-template-areas:
+    "title      title"
+    "calculator history";
+  grid-template-columns: 300px 1fr;
+  // gap: 0 20px;
+  .title {
+    grid-area: title;
+    align-items: center;
+    justify-items: center;
+    text-align: center;
+    background-color: #FED766;
+  }
+}
+
+
+@media screen and (max-width: 550px) {
+  .calculator {
+    grid-template-areas:
+      "title"
+      "calculator"
+      "history";
+    grid-template-columns: none;
+  }
+}
