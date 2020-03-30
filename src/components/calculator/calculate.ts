@@ -36,7 +36,7 @@ let pkeys = Array.from(priority.keys()).join('');
 
 function string2array(fullvalue: string, pkeys: string) {
   let turnVal = fullvalue;
-  let result = [];
+  let result: string[] = [];
   while (true) {
     let keyS = turnVal.search(`[${pkeys}]`);
     if (keyS === -1) break;
@@ -50,9 +50,9 @@ function string2array(fullvalue: string, pkeys: string) {
 
 function in2post(fullValue: string) {
   // priority data
-  let stack = [];
+  let stack: string[] = [];
   let getValue = "";
-  let postfix = [];
+  let postfix: any[] = [];
 
   for (let el of string2array(fullValue, pkeys)) {
     if (el.match(`[${pkeys}]`)) {

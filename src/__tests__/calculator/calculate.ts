@@ -1,5 +1,4 @@
 import { calculateInfix } from "components/calculator/calculate";
-
 /*
 .toBe
 .toBeUndefined

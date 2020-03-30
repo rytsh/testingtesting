@@ -1,5 +1,5 @@
 import React from "react";
-import {render, fireEvent } from '@testing-library/react';
+import ReactTest, {render, fireEvent } from '@testing-library/react';
 import { Provider } from 'react-redux';
 
 import Calculator from "components/calculator/View";
@@ -27,6 +27,10 @@ function renderWithRedux(
 }
 
 describe("Press and History Tests", ()=> {
+  afterEach(()=>{
+    ReactTest.cleanup();
+  })
+
   it("Press 9+2 and equal should be 11", ()=>{
       const { container, getByText } = renderWithRedux(<Calculator />);
       fireEvent.click(getByText('9'));
@@ -39,4 +43,5 @@ describe("Press and History Tests", ()=> {
       let check = store.getState() as storeObject;
       expect(check.calculator.history[check.calculator.history.length-1].calc).toMatch("9+2 = 11");
   })
+
 })

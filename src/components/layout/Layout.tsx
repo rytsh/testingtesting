@@ -11,6 +11,7 @@ import store from "store/one";
 import Calculator from "components/calculator/View";
 import Home from "components/text/info";
 import Post from "components/posts/Post";
+import Todo from "components/todo/Todo";
 
 export default function Layout() {
   return (
@@ -22,11 +23,15 @@ export default function Layout() {
               <NavLink exact={true} to="/">Home</NavLink>
               <NavLink to="/calc">Calculator</NavLink>
               <NavLink to="/post">Post</NavLink>
+              <NavLink to="/todo">Todo</NavLink>
             </nav>
         </div>
         <div className="content">
           <Provider store={store}>
             <Switch>
+                <Route path="/todo">
+                  <Todo />
+                </Route>
                 <Route path="/calc">
                   <Calculator />
                 </Route>
