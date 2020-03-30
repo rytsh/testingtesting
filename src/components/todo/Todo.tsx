@@ -9,6 +9,7 @@ interface todo {
 function startMirage({ environment = "test" } = {}) {
   return new Server({
     environment,
+    urlPrefix: 'http://localhost:4000',
     models: {
       todo: Model
     },
@@ -33,27 +34,64 @@ function startMirage({ environment = "test" } = {}) {
 // server.get("/api/todos", { todos: [{ id: 1, item: "kalem" }] })
 
 export default function Todo() {
-  let [todos, setTodo] = React.useState([])
+  let [todos, setTodo] = React.useState([]);
+  let [err, setErr] = React.useState("");
+
+  const fetchAPI = async () => {
+    return await fetch("http://localhost:4000/api/todos")
+    .then(res => {
+      if (res.ok) {
+        return res.json()
+      }
+      throw new Error("Request Failed");
+    })
+    .then(json => {
+      console.log(json.todos);
+      return json.todos;
+    })
+    .catch(err => {
+      setErr("Request Failed!")
+      return [];
+    });
+  };
 
   React.useEffect(() => {
-    let server;
+    let cancel = false;
+    let server:any;
     if (process.env.NODE_ENV === "development") {
       server = startMirage({environment:process.env.NODE_ENV})
     }
 
-    fetch("/api/todos")
-      .then(res => res.json())
-      .then(json => {
-        setTodo(json.todos)
-      })
-    return (server === undefined || server.shutdown());
+    const runEffect = async () => {
+      const data = await fetchAPI();
+      if (cancel) {
+        return;
+      }
+      setTodo(data);
+    };
+    runEffect();
+    return () => {
+      cancel = true;
+      server === undefined || server.shutdown()
+    };
   }, [])
 
   return (
-    <ul>
-      {todos.map((todo:todo) => (
-        <li key={todo.id}>{todo.item}</li>
-      ))}
-    </ul>
+    <ViewTodo err={err} todos={todos}/>
   )
+}
+
+interface ViewTodo{err:string, todos:Array<any>};
+
+function ViewTodo({err, todos}:ViewTodo) {
+  if (err === "") {
+    return (
+      <ul>
+        {todos.map((todo:todo) => (
+          <li key={todo.id}>{todo.item}</li>
+        ))}
+      </ul>);
+  }
+
+  return <div className="errorBox">{err}</div>
 }

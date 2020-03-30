@@ -6,6 +6,9 @@
     "sidebar content";
   grid-template-columns: 170px 1fr;
   // grid-gap: 1rem;
+  li {
+    list-style-position: inside;
+  }
 
   .sideBar {
     grid-template: "sidebar";
@@ -47,6 +50,12 @@
     }
     pre + pre {
       margin-top: 5px;
+    }
+    .errorBox {
+      border: 1px solid red;
+      padding: 2px;
+      background-color: bisque;
+      margin-top: 10px;
     }
   }
 }
