@@ -5,6 +5,7 @@
   grid-template-areas:
     "sidebar content";
   grid-template-columns: 170px 1fr;
+  word-break: break-all;
   // grid-gap: 1rem;
   li {
     list-style-position: inside;
@@ -44,7 +45,6 @@
     padding-right: 10px;
     pre {
       white-space: pre-wrap;
-      word-break: break-all;
       border: 1px solid grey;
       padding: 2px;
     }
