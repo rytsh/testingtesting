@@ -20,7 +20,8 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 __Add additional Libs__  
 ```shell
 yarn add redux react-redux react-router-dom redux-thunk decimal.js axios
-yarn add -D @types/react-redux node-sass @types/react-router-dom @testing-library/react history puppeteer miragejs @types/puppeteer enzyme enzyme-adapter-react-16 @types/enzyme @types/enzyme-adapter-react-16 gh-pages
+
+yarn add -D @types/react-redux node-sass @types/react-router-dom @testing-library/react history puppeteer miragejs @types/puppeteer enzyme enzyme-adapter-react-16 @types/enzyme @types/enzyme-adapter-react-16 gh-pages jest-environment-jsdom-sixteen @types/testing-library__react @types/pretty-format @types/react-dom
 ```
 
 Don't run above commands, just use `yarn install`.

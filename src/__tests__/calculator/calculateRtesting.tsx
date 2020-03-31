@@ -1,5 +1,5 @@
 import React from "react";
-import ReactTest, {render, fireEvent } from '@testing-library/react';
+import {render, fireEvent, cleanup } from '@testing-library/react';
 import { Provider } from 'react-redux';
 
 import Calculator from "components/calculator/View";
@@ -28,7 +28,7 @@ function renderWithRedux(
 
 describe("Press and History Tests", ()=> {
   afterEach(()=>{
-    ReactTest.cleanup();
+    cleanup();
   })
 
   it("Press 9+2 and equal should be 11", ()=>{

@@ -180,3 +180,4 @@ function mapStateToProps(state: any) {
 }
 
 export default connect(mapStateToProps)(CalcView);
+export {CalcView};

@@ -15,7 +15,7 @@ import Todo from "components/todo/Todo";
 
 export default function Layout() {
   return (
-    <Router>
+    <Router basename={process.env.PUBLIC_URL}>
       <div className="layout">
         <div className="sideBar">
           <div className="title">Test Bench</div>
