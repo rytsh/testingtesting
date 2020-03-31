@@ -3,6 +3,7 @@ import puppeteer from "puppeteer";
 describe("Main UI tests", () =>{
   let browser:puppeteer.Browser;
   let page:puppeteer.Page;
+  // Use this arguments in launch(...
   // headless: false,
   // devtools: true,
   // slowMo: 250
@@ -15,18 +16,18 @@ describe("Main UI tests", () =>{
   });
 
   afterEach(async () => {
-    page.close()
+    await page.close()
   });
 
   afterAll(() => {
     browser.close()
   });
 
-  it("View", async() => {
-    await page.goto('http://localhost:3000');
+  it("View", async () => {
+    await page.goto('http://localhost:3000/testingtesting');
     await page.waitForSelector('h1', { visible: true});
     await page.screenshot({path: 'src/__tests__/UI/screen/home.png'});
-    await page.click('[href="/calc"]');
+    await page.click('[href$="/calc"]');
     await page.waitForSelector('[data-testid="title"]', { visible: true});
     await page.screenshot({path: 'src/__tests__/UI/screen/calc.png'});
     await page.emulate(puppeteer.devices['iPhone 5 landscape'])

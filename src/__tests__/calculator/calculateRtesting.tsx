@@ -29,7 +29,7 @@ function renderWithRedux(
 describe("Press and History Tests", ()=> {
   afterEach(()=>{
     cleanup();
-  })
+  });
 
   it("Press 9+2 and equal should be 11", ()=>{
       const { container, getByText } = renderWithRedux(<Calculator />);

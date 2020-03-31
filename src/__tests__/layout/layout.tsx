@@ -1,7 +1,8 @@
 import React from "react";
 import { Router } from 'react-router-dom'
-import {render, screen, fireEvent, getByTestId} from '@testing-library/react';
+import {render, screen, fireEvent, waitFor, waitForElement, getByAltText} from '@testing-library/react';
 import { createMemoryHistory } from 'history';
+import cheerio from "cheerio";
 
 import Layout from "components/layout/Layout";
 
@@ -23,13 +24,27 @@ function renderWithRouter(
   };
 }
 
-test('full app rendering/navigating', () => {
-  const {container} = renderWithRouter(<Layout/>);
-  // normally I'd use a data-testid, but just wanted to show this is also possible
+test('full app rendering/navigating', async () => {
+  const mockText = Promise.resolve(
+    '# hello'
+  );
+  const mockFetchPromise = Promise.resolve({
+    ok: true,
+    text: () => mockText
+  });
+
+  jest.spyOn(global as any, 'fetch').mockImplementation(() => mockFetchPromise);
+
+  const {container, getByText } = renderWithRouter(<Layout/>);
   // expect(container.getElementsByClassName('content')[0].innerHTML).toMatch('You are home');
-  expect(getByTestId(container, "title").textContent).toMatch("Welcome React-Redux Test Bench");
   const leftClick = {button: 0};
-  fireEvent.click(screen.getByText(/Calculator/i), leftClick);
-  // normally I'd use a data-testid, but just wanted to show this is also possible
-  expect(getByTestId(container, "title").textContent).toMatch("Calculator with history");
+  fireEvent.click(getByText(/Calculator/i), leftClick);
+  let $ = cheerio.load(container.innerHTML);
+  expect($('.title').children('p').text()).toBe("Calculator with history");
+
+  fireEvent.click(getByText(/Home/), leftClick);
+  await waitFor(()=>{container.querySelector('h1')}, );
+  // console.log(container.innerHTML);
+  $ = cheerio.load(container.innerHTML);
+  expect($('h1').text()).toBe("hello");
 })
