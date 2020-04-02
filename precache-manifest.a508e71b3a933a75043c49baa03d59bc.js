@@ -1,11 +1,11 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "141a2fd501e343a14be58f2fe0ca6574",
+    "revision": "09877cce3d9fe43f6e35038545bf4cba",
     "url": "https://rytsh.github.io/testingtesting/index.html"
   },
   {
-    "revision": "21cc72d142f4d7cf51f2",
-    "url": "https://rytsh.github.io/testingtesting/static/css/main.c6b53b6b.chunk.css"
+    "revision": "0b600d00fed2c7f23c7f",
+    "url": "https://rytsh.github.io/testingtesting/static/css/main.6847471a.chunk.css"
   },
   {
     "revision": "690a91b6ed7c49f41900",
@@ -16,7 +16,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "https://rytsh.github.io/testingtesting/static/js/2.609b412d.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "21cc72d142f4d7cf51f2",
+    "revision": "0b600d00fed2c7f23c7f",
     "url": "https://rytsh.github.io/testingtesting/static/js/main.9dde1d8e.chunk.js"
   },
   {
