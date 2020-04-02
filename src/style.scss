@@ -11,11 +11,23 @@ $font-stack: Arial, Helvetica, sans-serif;
 }
 
 body {
+  touch-action: manipulation;
   background-color: $light-color;
   font-family: $font-stack;
   line-height: 1.6;
 }
 
+input {
+  -webkit-appearance: none;
+}
+
+input:disabled, textarea:disabled, input:disabled::placeholder, textarea:disabled::placeholder {
+  -webkit-text-fill-color: currentcolor; /* 1. sets text fill to current `color` for safari */
+  opacity: 1; /* 2. correct opacity on iOS */
+  -webkit-appearance:none;
+  -webkit-border-radius:0; 
+  border-radius:0;
+}
 
 // @viewport {
 //   zoom: auto;
