@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.css": "/testingtesting/static/css/main.c6b53b6b.chunk.css",
-    "main.js": "/testingtesting/static/js/main.d36c3ee0.chunk.js",
-    "runtime-main.js": "/testingtesting/static/js/runtime-main.3cd34aca.js",
-    "static/js/2.adb5c9b2.chunk.js": "/testingtesting/static/js/2.adb5c9b2.chunk.js",
-    "index.html": "/testingtesting/index.html",
-    "precache-manifest.95d3b8cd5a74f4c51934f825f107a1c4.js": "/testingtesting/precache-manifest.95d3b8cd5a74f4c51934f825f107a1c4.js",
-    "service-worker.js": "/testingtesting/service-worker.js",
-    "static/js/2.adb5c9b2.chunk.js.LICENSE.txt": "/testingtesting/static/js/2.adb5c9b2.chunk.js.LICENSE.txt",
-    "static/media/README.md": "/testingtesting/static/media/README.16034c4f.md"
+    "main.css": "https://rytsh.github.io/testingtesting/static/css/main.c6b53b6b.chunk.css",
+    "main.js": "https://rytsh.github.io/testingtesting/static/js/main.9dde1d8e.chunk.js",
+    "runtime-main.js": "https://rytsh.github.io/testingtesting/static/js/runtime-main.a9cadc91.js",
+    "static/js/2.609b412d.chunk.js": "https://rytsh.github.io/testingtesting/static/js/2.609b412d.chunk.js",
+    "index.html": "https://rytsh.github.io/testingtesting/index.html",
+    "precache-manifest.aca159e0f55a84883f213ef90acda604.js": "https://rytsh.github.io/testingtesting/precache-manifest.aca159e0f55a84883f213ef90acda604.js",
+    "service-worker.js": "https://rytsh.github.io/testingtesting/service-worker.js",
+    "static/js/2.609b412d.chunk.js.LICENSE.txt": "https://rytsh.github.io/testingtesting/static/js/2.609b412d.chunk.js.LICENSE.txt",
+    "static/media/README.md": "https://rytsh.github.io/testingtesting/static/media/README.16034c4f.md"
   },
   "entrypoints": [
-    "static/js/runtime-main.3cd34aca.js",
-    "static/js/2.adb5c9b2.chunk.js",
+    "static/js/runtime-main.a9cadc91.js",
+    "static/js/2.609b412d.chunk.js",
     "static/css/main.c6b53b6b.chunk.css",
-    "static/js/main.d36c3ee0.chunk.js"
+    "static/js/main.9dde1d8e.chunk.js"
   ]
 }
