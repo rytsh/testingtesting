@@ -1,6 +1,7 @@
 import React from "react";
 import {
   BrowserRouter as Router,
+  HashRouter,
   Switch,
   Route,
   NavLink
@@ -16,6 +17,7 @@ import Todo from "components/todo/Todo";
 export default function Layout() {
   return (
     <Router basename={process.env.PUBLIC_URL}>
+      <HashRouter>
       <div className="layout">
         <div className="sideBar">
           <div className="title">Test Bench</div>
@@ -45,6 +47,7 @@ export default function Layout() {
           </Provider>
         </div>
       </div>
+      </HashRouter>
     </Router>
   )
 }

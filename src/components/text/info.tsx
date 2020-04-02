@@ -10,6 +10,9 @@ interface HomeProps {
 }
 
 function Home({info, dispatch}: HomeProps) {
+  React.useLayoutEffect(()=>{
+    document.title = 'TestingTesting';
+  },[])
   const initFetch = useCallback(() => {
     fetch(readmePath).then(
       content => content.text()).then(

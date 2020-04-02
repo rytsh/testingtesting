@@ -24,6 +24,9 @@ function Body({content}:PropsBody) {
 }
 
 function Post({text, content, isLoading, error, dispatch}: Props) {
+  React.useLayoutEffect(()=>{
+    document.title = 'Post';
+  },[])
   const result = isLoading? <h2>"Loading.."</h2>: (<Body content={content}/>);
   return (
     <>

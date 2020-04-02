@@ -1,5 +1,4 @@
 {
-  "homepage": "https://rytsh.github.io/testingtesting/",
   "name": "calcr",
   "version": "0.1.0",
   "private": true,
@@ -21,7 +20,7 @@
     "typescript": "~3.7.2"
   },
   "scripts": {
-    "predeploy": "GENERATE_SOURCEMAP=false yarn build",
+    "predeploy": "GENERATE_SOURCEMAP=false PUBLIC_URL='https://rytsh.github.io/testingtesting' react-scripts build",
     "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",

@@ -34,6 +34,10 @@ function startMirage({ environment = "test" } = {}) {
 // server.get("/api/todos", { todos: [{ id: 1, item: "kalem" }] })
 
 export default function Todo() {
+  React.useLayoutEffect(()=>{
+    document.title = 'Todo';
+  },[])
+
   let [todos, setTodo] = React.useState([]);
   let [err, setErr] = React.useState("");
 
