@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "https://rytsh.github.io/testingtesting/precache-manifest.a508e71b3a933a75043c49baa03d59bc.js"
+  "https://rytsh.github.io/testingtesting/precache-manifest.f14f0f44dbd3fbe1fb50c64bd802bc4c.js"
 );
 
 self.addEventListener('message', (event) => {

@@ -1,11 +1,11 @@
 {
   "files": {
-    "main.css": "https://rytsh.github.io/testingtesting/static/css/main.6847471a.chunk.css",
+    "main.css": "https://rytsh.github.io/testingtesting/static/css/main.dbae55a5.chunk.css",
     "main.js": "https://rytsh.github.io/testingtesting/static/js/main.9dde1d8e.chunk.js",
     "runtime-main.js": "https://rytsh.github.io/testingtesting/static/js/runtime-main.a9cadc91.js",
     "static/js/2.609b412d.chunk.js": "https://rytsh.github.io/testingtesting/static/js/2.609b412d.chunk.js",
     "index.html": "https://rytsh.github.io/testingtesting/index.html",
-    "precache-manifest.a508e71b3a933a75043c49baa03d59bc.js": "https://rytsh.github.io/testingtesting/precache-manifest.a508e71b3a933a75043c49baa03d59bc.js",
+    "precache-manifest.f14f0f44dbd3fbe1fb50c64bd802bc4c.js": "https://rytsh.github.io/testingtesting/precache-manifest.f14f0f44dbd3fbe1fb50c64bd802bc4c.js",
     "service-worker.js": "https://rytsh.github.io/testingtesting/service-worker.js",
     "static/js/2.609b412d.chunk.js.LICENSE.txt": "https://rytsh.github.io/testingtesting/static/js/2.609b412d.chunk.js.LICENSE.txt",
     "static/media/README.md": "https://rytsh.github.io/testingtesting/static/media/README.16034c4f.md"
@@ -13,7 +13,7 @@
   "entrypoints": [
     "static/js/runtime-main.a9cadc91.js",
     "static/js/2.609b412d.chunk.js",
-    "static/css/main.6847471a.chunk.css",
+    "static/css/main.dbae55a5.chunk.css",
     "static/js/main.9dde1d8e.chunk.js"
   ]
 }
