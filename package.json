@@ -57,7 +57,7 @@
     "history": "^4.10.1",
     "jest-environment-jsdom-sixteen": "^1.0.3",
     "miragejs": "^0.1.35",
-    "node-sass": "^4.13.1",
+    "node-sass": "^7.0.0",
     "puppeteer": "^2.1.1"
   }
 }
